@@ -7,7 +7,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	color: #333;
-    background-image: url(/static/img/handmadepaper.png);
+/*    background-image: url(/static/img/handmadepaper.png); */
+    background-color: #f3f3f3;
 }
 
 p {
@@ -29,16 +30,11 @@ a:hover {
     color: black;
 }
 
-img.img-block {
-    border: 16px solid black;
-}
-
 div.main-container {
-    content: ' ';
-    padding: 80px 0; 
 }
 
 h1.name {
+    text-align: center;
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 28px;
@@ -59,6 +55,77 @@ h2.nav {
         font-size: 26px;
     }
 }
+
+/* Head Animation Styling */
+
+#head-images {
+    position: relative;
+    width: 600px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-head {
+    position: absolute;
+    height: 718px;
+    transition: left 2s .5s, opacity 1.5s 1s;
+    opacity: 1;
+    visibility: visible;
+}
+.head-left-half {
+    z-index: 300;
+    width: 300px;
+    opacity: 1;
+    transition: visibility 0s 2.5s;
+}
+.head-left-half.show-left {
+    visibility: hidden;
+    transition: visibility 0s;
+}
+.head-left-half.show-right {
+    opacity: 0;
+    transition: opacity 1s .5s;
+}
+.head-right-half {
+    left: 300px;
+    z-index: 300;
+    width: 300px;
+    opacity: 1;
+}
+.head-right-half.show-left {
+    opacity: 0;
+    transition: opacity 1s .5s;
+}
+.head-right-half.show-right {
+    visibility: hidden;
+    transition: visibility 0s;
+}
+.head-left-full {
+    left: 0px;
+    z-index: 200;
+    width: 600px;
+}
+.head-left-full.show-left {
+    left: -300px;
+}
+.head-left-full.show-right {
+    visibility: hidden;
+    transition: visibility 0s;
+}
+.head-right-full {
+    left: 0;
+    z-index: 200;
+    width: 600px;
+    transition: visibility 0s 2.5s;
+}
+.head-right-full.show-left {
+    visibility: hidden;
+    transition: visibility 0s;
+}
+.head-right-full.show-right {
+    left: 300px;
+}
+
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)

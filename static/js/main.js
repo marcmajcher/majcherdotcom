@@ -33,4 +33,12 @@ function retina() {
 	});
 };
  
-$(document).ready(retina);
+function init() {
+	retina();
+
+	$('.name').click(function() {
+		$('.img-head').toggleClass('show-left');
+	});
+}
+
+$(document).ready(init);
