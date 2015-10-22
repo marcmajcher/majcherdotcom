@@ -38,12 +38,34 @@ h1.name {
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 28px;
+    cursor: pointer;
 }
 
-h2.nav {
+h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 24px;
+}
+
+.trigger {
+    visibility: visible;
+    transition: visibility 0s 2.5s;
+    cursor: pointer;
+
+}
+.left-trigger {
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.right-trigger {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.trigger.show-left, .trigger.show-right {
+    visibility: hidden;
+    transition: visibility 0s 0s;
 }
 
 @media(max-width:1160px) {
@@ -65,18 +87,19 @@ h2.nav {
     margin-left: auto;
     margin-right: auto;
 }
+
 .img-head {
     position: absolute;
     height: 718px;
-    transition: left 2s .5s, opacity 1.5s 1s;
     opacity: 1;
     visibility: visible;
 }
+
 .head-left-half {
     z-index: 300;
     width: 300px;
     opacity: 1;
-    transition: visibility 0s 2.5s;
+    transition: visibility 0s 2.5s, opacity 1.5s 1s;
 }
 .head-left-half.show-left {
     visibility: hidden;
@@ -91,6 +114,7 @@ h2.nav {
     z-index: 300;
     width: 300px;
     opacity: 1;
+    transition: visibility 0s 2.5s, opacity 1.5s 1s;
 }
 .head-right-half.show-left {
     opacity: 0;
@@ -104,6 +128,7 @@ h2.nav {
     left: 0px;
     z-index: 200;
     width: 600px;
+    transition: visibility 0s 2.5s, left 2s .5s;
 }
 .head-left-full.show-left {
     left: -300px;
@@ -116,7 +141,7 @@ h2.nav {
     left: 0;
     z-index: 200;
     width: 600px;
-    transition: visibility 0s 2.5s;
+    transition: visibility 0s 2.5s, left 2s .5s;
 }
 .head-right-full.show-left {
     visibility: hidden;

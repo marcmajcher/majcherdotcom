@@ -36,8 +36,15 @@ function retina() {
 function init() {
 	retina();
 
+	$('.left-trigger').click(function() {
+		$('.img-head, .trigger').addClass('show-left');
+	});
+	$('.right-trigger').click(function() {
+		$('.img-head, .trigger').addClass('show-right');
+	});
 	$('.name').click(function() {
-		$('.img-head').toggleClass('show-left');
+		$('.img-head, .trigger').removeClass('show-right');
+		$('.img-head, .trigger').removeClass('show-left');
 	});
 }
 
