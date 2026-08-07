@@ -45,6 +45,8 @@ body {
     display: grid;
     place-items: center;
     padding: var(--gutter);
+
+    background: var(--backdrop);
     font-family: var(--font);
     font-weight: 300;
     color: var(--ink);
